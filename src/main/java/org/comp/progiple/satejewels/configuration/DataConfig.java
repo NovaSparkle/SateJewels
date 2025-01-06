@@ -5,7 +5,6 @@ import lombok.Setter;
 import lombok.SneakyThrows;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.comp.progiple.lunamoonjewels.LunaMoonJewels;
 import org.comp.progiple.satejewels.SateJewels;
 
 import java.io.File;
