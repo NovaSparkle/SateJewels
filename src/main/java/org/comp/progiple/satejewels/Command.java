@@ -21,7 +21,8 @@ public class Command implements CommandExecutor, TabCompleter {
     public boolean onCommand(@NotNull CommandSender sender, org.bukkit.command.@NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if (args.length >= 1) {
             switch (args[0]) {
-                case "give", "add":
+                case "give":
+                case "add":
                     if (hasAdminPerm(sender)) {
                         if (args.length >= 3) {
                             String nick = args[1];
@@ -40,7 +41,7 @@ public class Command implements CommandExecutor, TabCompleter {
                         Tools.sendMessage(sender, "reloadPlugin", "successful");
                     }
                     break;
-                case "balance", "bal":
+                case "balance":
                     if (args.length >= 2) {
                         String nick = args[1];
                         if (sender.hasPermission("lmjewels.balance.another")) {
@@ -56,7 +57,7 @@ public class Command implements CommandExecutor, TabCompleter {
                         else Tools.sendMessage(sender, "noPerm", "error");
                     }
                     break;
-                case "removeJewels", "take":
+                case "take":
                     if (hasAdminPerm(sender)) {
                         if (args.length >= 3) {
                             String nick = args[1];
@@ -68,7 +69,7 @@ public class Command implements CommandExecutor, TabCompleter {
                         else this.noArgsMess(sender);
                     }
                     break;
-                case "payJewels", "pay":
+                case "pay":
                     if (sender.hasPermission("lmjewels.pay")) {
                         if (args.length >= 3) {
                             String nick = args[1];
@@ -84,7 +85,7 @@ public class Command implements CommandExecutor, TabCompleter {
                     }
                     else Tools.sendMessage(sender, "noPerm", "error");
                     break;
-                case "setJewels", "set":
+                case "set":
                     if (hasAdminPerm(sender)) {
                         if (args.length >= 3) {
                             String nick = args[1];
