@@ -1,0 +1,4 @@
+name: SateJewels
+version: '${project.version}'
+main: org.comp.progiple.satejewels.SateJewels
+api-version: '1.16'
